@@ -14,8 +14,8 @@ function CategoryFallback() {
 
 export default function Category(){
 
-    const [collections, setCollections] = useState<any>([]);
-const getCollections = async () => {
+  const [collections, setCollections] = useState<any>([]);
+  const getCollections = async () => {
     const querySnapshot = await getDocs(collection(db, "categories"));
 
     const productData = querySnapshot.docs.map((doc) => ({
@@ -24,6 +24,7 @@ const getCollections = async () => {
     }));
     setCollections(productData);
   }
+  getCollections()
     return (
     <>
     <div className="w-full h-16 flex items-center gap-12 justify-between border-b border-zinc-300 px-10 ">

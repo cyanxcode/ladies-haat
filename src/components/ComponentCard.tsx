@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 interface Props {
-  img?: string | "BLACK.jpeg";
   text: string;
 }
 
-export default function Cards({ img, text }: Props) {
+export default function Cards({ text }: Props) {
+  const img = "BLACK.jpg"
   return (
     <>
       <div className="h-auto relative rounded-xl overflow-hidden">
