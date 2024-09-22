@@ -1,9 +1,9 @@
 "use client"
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { Suspense } from 'react'
 import { IoArrowBack, IoBagOutline } from "react-icons/io5";
+import Display from "./display";
 
 
 function CategoryFallback() {
@@ -11,8 +11,6 @@ function CategoryFallback() {
 }
 
 export default function Category(){
-    const searchParams = useSearchParams();
-    const title = searchParams.get("group");
 
     return (
     <>
@@ -25,7 +23,7 @@ export default function Category(){
         </Link>
     </div>
     <Suspense fallback={<CategoryFallback/>}>
-        <h2 className="text-3xl font-semibold m-10">{title}</h2>
+        <Display />
     </Suspense>
     </>
     );
