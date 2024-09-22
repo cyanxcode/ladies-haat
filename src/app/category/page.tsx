@@ -20,5 +20,6 @@ export default function Category(){
         </Link>
     </div>
     <h2 className="text-3xl font-semibold m-10">{title}</h2>
-    </>)
+    </>
+    );
 }
