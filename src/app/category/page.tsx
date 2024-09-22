@@ -2,12 +2,17 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
 import { IoArrowBack, IoBagOutline } from "react-icons/io5";
+
+
+function CategoryFallback() {
+    return <h2 className="text-3xl font-semibold m-10">Category</h2>
+}
 
 export default function Category(){
     const searchParams = useSearchParams();
     const title = searchParams.get("group");
-
 
     return (
     <>
@@ -19,7 +24,9 @@ export default function Category(){
           <IoBagOutline size={30} />
         </Link>
     </div>
-    <h2 className="text-3xl font-semibold m-10">{title}</h2>
+    <Suspense fallback={<CategoryFallback/>}>
+        <h2 className="text-3xl font-semibold m-10">{title}</h2>
+    </Suspense>
     </>
     );
 }
