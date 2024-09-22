@@ -1,3 +1,9 @@
+import Chipsbar from "@/components/Chips/Chipsbar";
+import Navbar from "@/components/Navbar";
+
 export default function Home(){
-  return <>hi</>;
+  return <>
+    <Navbar/>
+    <Chipsbar />
+  </>;
 }
