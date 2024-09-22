@@ -1,8 +1,14 @@
 import { useSearchParams } from "next/navigation";
 
-export default function Display(){
+interface Props{
+    data: [];
+}
+
+export default function Display({data}: Props){
     const searchParams = useSearchParams();
     const title = searchParams.get("group");
+    console.log(data);
+
 
     return (
         <div>
