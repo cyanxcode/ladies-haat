@@ -8,7 +8,7 @@ export default function Chips({ children, next }: Props) {
   return (
     <>
       <Link href={`/category?group=${next}`}>
-        <div className="rounded-[4rem] h-8 px-10 border border-zinc-400 text-zinc-400 grid place-content-center">
+        <div className="rounded-[4rem] h-8 px-10 border border-zinc-400 text-zinc-400 grid place-content-center whitespace-nowrap">
           {children}
         </div>
       </Link>
