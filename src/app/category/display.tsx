@@ -18,7 +18,7 @@ export default function Display({data}: Props){
             <div className=" grid grid-cols-2 sm:grid-cols-auto-fill-200 justify-evenly gap-10 flex-wrap px-10">
             {categorizedData.map((category: any) => {
                 return (
-                    <Link key={category.id} href={`/${category.url}`}>
+                    <Link key={category.id} href={`/${title}/${category.tag}`}>
                         <ComponentCard text={category.title}/>
                     </Link>
                 );
