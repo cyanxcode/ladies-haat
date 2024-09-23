@@ -19,7 +19,7 @@ export default function Display({data}: Props){
             {categorizedData.map((category: any) => {
                 return (
                     <Link key={category.id} href={`/${title}/${category.tag}`}>
-                        <ComponentCard text={category.title}/>
+                        <ComponentCard text={category.title} img={category.image}/>
                     </Link>
                 );
             })}
